@@ -49,8 +49,8 @@ class App extends React.Component{
         <ProfileCard user={this.state.user}/>
         
         <div>
-          {this.state.followers.map(item => 
-              <FollowersCard follower={this.state.follower}/>
+          {this.state.followers.map(follower => 
+              <FollowersCard follower={follower}/>
           )}
         </div>
 
