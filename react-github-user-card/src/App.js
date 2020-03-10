@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import ProfileCard from './ProfileCard';
+import FollowersCard from './FollowersCard';
 
 import './App.css';
 
@@ -43,7 +45,17 @@ class App extends React.Component{
 
   render(){
     return (
-      <div>Hellow World</div>
+      <div>
+        <ProfileCard user={this.state.user}/>
+        
+        <div>
+          {this.state.followers.map(item => 
+              <FollowersCard follower={this.state.follower}/>
+          )}
+        </div>
+
+
+      </div>
     )
   }
 }
